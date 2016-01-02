@@ -1,0 +1,18 @@
+{
+  "uuid": "3a1d859d-12f3-489c-953b-95ef7aadea9b",
+  "shortName": "workertest",
+  "longName": "workertest",
+  "companyName": "MakeAwesomeHappen",
+  "versionLabel": "1.0",
+  "sdkVersion": "3",
+  "targetPlatforms": ["aplite", "basalt", "chalk"],
+  "watchapp": {
+    "watchface": false
+  },
+  "appKeys": {
+    "dummy": 0
+  },
+  "resources": {
+    "media": []
+  }
+}
