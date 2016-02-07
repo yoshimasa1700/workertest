@@ -1,22 +1,27 @@
 {
-    "appKeys": {
-        "dummy": 0
-    },
-    "capabilities": [
-        ""
-    ],
-    "companyName": "MakeAwesomeHappen",
-    "longName": "workertest",
-    "projectType": "native",
-    "resources": {
-        "media": []
-    },
-    "sdkVersion": "2",
-    "shortName": "workertest",
-    "uuid": "3a1d859d-12f3-489c-953b-95ef7aadea9b",
-    "versionCode": 1,
-    "versionLabel": "1.0",
-    "watchapp": {
-        "watchface": false
-    }
+  "appKeys": {
+    "dummy": 0
+  },
+  "capabilities": [
+    ""
+  ],
+  "companyName": "MakeAwesomeHappen",
+  "longName": "workertest",
+  "projectType": "native",
+  "resources": {
+    "media": []
+  },
+  "sdkVersion": "3",
+  "shortName": "workertest",
+  "uuid": "3a1d859d-12f3-489c-953b-95ef7aadea9b",
+  "versionCode": 1,
+  "versionLabel": "1.0",
+  "watchapp": {
+    "watchface": false
+  },
+  "targetPlatforms": [
+    "aplite",
+    "basalt",
+    "chalk"
+  ]
 }

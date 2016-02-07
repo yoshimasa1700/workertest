@@ -3,8 +3,32 @@
 static Window *window;
 static TextLayer *text_layer;
 
+#define PERSIST_KEY_STEPS 52
+
+static int s_worker_steps;
+
+static void get_step_count() {
+  // Get the data from Persistent Storage
+  s_worker_steps = persist_read_int(PERSIST_KEY_STEPS);
+}
+
 static void select_click_handler(ClickRecognizerRef recognizer, void *context) {
-  text_layer_set_text(text_layer, "Select");
+
+
+  bool running = app_worker_is_running();
+
+  if (running){
+    get_step_count();
+
+    static char step_count[] = "9999";
+    snprintf(step_count, sizeof("9999"), "%d", s_worker_steps);
+    
+    text_layer_set_text(text_layer, step_count);
+  }else{
+    text_layer_set_text(text_layer, "Not Running");
+  }
+
+  
 }
 
 static void up_click_handler(ClickRecognizerRef recognizer, void *context) {
@@ -44,6 +68,8 @@ static void init(void) {
   });
   const bool animated = true;
   window_stack_push(window, animated);
+
+  AppWorkerResult result = app_worker_launch();
 }
 
 static void deinit(void) {
